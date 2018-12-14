@@ -29,3 +29,9 @@ else if(firstvalue!==secondvalue && firstvalue!==thirdvalue &&secondvalue!==thir
     text="Scalene Triangle."
 }
 //Scalene Triangle
+else{
+    text = "Not a Triangle."
+    
+}
+document.getElementById('demo').innerHTML = text;
+}
