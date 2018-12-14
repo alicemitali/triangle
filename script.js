@@ -7,3 +7,9 @@ var sideSum1 = function(firstvalue, secondvalue) {
   var sideSum3 = function(firstvalue, thirdvalue) {
     return firstvalue + thirdvalue;
   };
+  function check(){
+  
+    var firstvalue=parseInt(document.getElementById('one').value);
+    var secondvalue=parseInt(document.getElementById('two').value);
+    var thirdvalue=parseInt(document.getElementById('three').value);
+    
