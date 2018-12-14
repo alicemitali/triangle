@@ -25,3 +25,7 @@ var sideSum1 = function(firstvalue, secondvalue) {
     text="Isoscele Triangle.";
 }
 //Isoscele Triangle
+else if(firstvalue!==secondvalue && firstvalue!==thirdvalue &&secondvalue!==thirdvalue){
+    text="Scalene Triangle."
+}
+//Scalene Triangle
