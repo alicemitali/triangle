@@ -21,3 +21,7 @@ var sideSum1 = function(firstvalue, secondvalue) {
     text = "Equilaterial Triangle.";
 }
  //Equivalent Triangle
+ else if(firstvalue===secondvalue || firstvalue===thirdvalue || secondvalue===thirdvalue) {
+    text="Isoscele Triangle.";
+}
+//Isoscele Triangle
