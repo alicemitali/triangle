@@ -12,8 +12,12 @@ var sideSum1 = function(firstvalue, secondvalue) {
     var firstvalue=parseInt(document.getElementById('one').value);
     var secondvalue=parseInt(document.getElementById('two').value);
     var thirdvalue=parseInt(document.getElementById('three').value);
-    
+
     var text;
     if(sideSum1(firstvalue,secondvalue) <= thirdvalue || sideSum2(secondvalue,thirdvalue) <= firstvalue || sideSum3(firstvalue,thirdvalue) <= secondvalue){
        text="it is not triangle"
    }
+   else if(firstvalue === secondvalue && secondvalue === thirdvalue){
+    text = "Equilaterial Triangle.";
+}
+ //Equivalent Triangle
