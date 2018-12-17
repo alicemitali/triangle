@@ -1,46 +1,46 @@
-var sideSum1 = function(firstvalue, secondvalue) {
-  return firstvalue + secondvalue;
-};
-var sideSum2 = function(secondvalue, thirdvalue) {
-  return secondvalue + thirdvalue;
-};
-var sideSum3 = function(firstvalue, thirdvalue) {
-  return firstvalue + thirdvalue;
-};
-function check() {
-  var firstvalue = parseInt(document.getElementById("one").value);
-  var secondvalue = parseInt(document.getElementById("two").value);
-  var thirdvalue = parseInt(document.getElementById("three").value);
 
-  var text;
-  if (
-    sideSum1(firstvalue, secondvalue) <= thirdvalue ||
-    sideSum2(secondvalue, thirdvalue) <= firstvalue ||
-    sideSum3(firstvalue, thirdvalue) <= secondvalue
-  ) {
-    text = "it is not triangle";
-  } else if (firstvalue === secondvalue && secondvalue === thirdvalue) {
-    text = "Equilaterial Triangle.";
-  }
-  //Equivalent Triangle
-  else if (
-    firstvalue === secondvalue ||
-    firstvalue === thirdvalue ||
-    secondvalue === thirdvalue
-  ) {
-    text = "Isoscele Triangle.";
-  }
-  //Isoscele Triangle
-  else if (
-    firstvalue !== secondvalue &&
-    firstvalue !== thirdvalue &&
-    secondvalue !== thirdvalue
-  ) {
-    text = "Scalene Triangle.";
-  }
-  //Scalene Triangle
-  else {
-    text = "Not a Triangle.";
-  }
-  document.getElementById("demo").innerHTML = text;
+function check() {
+    var firstvalue = parseInt(document.getElementById('one').value);
+    var secondvalue = parseInt(document.getElementById('two').value);
+    var thirdvalue = parseInt(document.getElementById('three').value);
+    var array = [firstvalue, secondvalue, thirdvalue];
+    var text;
+    if (firstvalue <= 0 || secondvalue <= 0 || thirdvalue <= 0) {
+        text = "Undefined"
+    } else if (
+        (firstvalue + secondvalue <= thirdvalue &&
+            secondvalue + firstvalue <= thirdvalue) ||
+        (firstvalue + thirdvalue <= secondvalue &&
+            thirdvalue + firstvalue <= secondvalue) ||
+        (secondvalue + thirdvalue <= firstvalue && thirdvalue + secondvalue <= firstvalue)
+    ) {
+        text = "Not a Triangle.";
+    }
+    // Not a triangle
+    else if (firstvalue === secondvalue &&
+        firstvalue === thirdvalue &&
+        secondvalue === thirdvalue) {
+        text = "Equilaterial Triangle.";
+    }
+    //Equivalent Triangle
+    else if (firstvalue === secondvalue ||
+        firstvalue === thirdvalue ||
+        secondvalue === thirdvalue) {
+        text = "Isosceles Triangle.";
+
+    }
+    //Isoscele Triangle
+    else if (firstvalue !== secondvalue &&
+        firstvalue !== thirdvalue &&
+        secondvalue !== thirdvalue) {
+        text = "Scalene Triangle."
+    }
+    //Scalene Triangle
+    else {
+        text = "Error.";
+    }
+
+    document.getElementById('demo').innerHTML = "The side of trianges are[" + array + "]" + " it means: ";
+    document.getElementById('demo').innerHTML += text;
+
 }
