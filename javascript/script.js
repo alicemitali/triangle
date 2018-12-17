@@ -40,7 +40,7 @@ function check() {
         text = "Error.";
     }
 
-    document.getElementById('demo').innerHTML = "The side of trianges are[" + array + "]" + " it means: ";
+    document.getElementById('demo').innerHTML = "The values are[" + array + "]" + ": ";
     document.getElementById('demo').innerHTML += text;
 
 }
